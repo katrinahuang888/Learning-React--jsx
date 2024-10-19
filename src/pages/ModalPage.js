@@ -1,0 +1,48 @@
+import { useState } from 'react';
+import Modal from '../components/Modal';
+import Button from '../components/Button';
+
+function ModalPage() {
+    const [showModal, setShowModal] = useState(false);
+
+    const handleClick = () => {
+        setShowModal(true);
+    };
+
+    const handleClose = () => {
+        setShowModal(false);
+    };
+
+    const actionBar = <div>
+        <Button primary onClick={handleClose} >I Accept</Button>
+    </div>
+
+    const modal = <Modal onClose={handleClose} actionBar={actionBar}>
+        <p>
+            Here is an important agreement for you to accept
+        </p>
+    </Modal>
+
+    return (
+        <div className="relative">
+            <Button onClick = {handleClick} primary>
+                Open Modal
+            </Button>
+            {showModal && modal}
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consequat ultrices eros, sed mattis massa hendrerit at. Praesent commodo congue arcu in vehicula. Nullam iaculis massa quis mi sollicitudin, ultrices aliquet nunc auctor. Sed tristique sit amet diam congue accumsan. Nulla feugiat cursus leo sed tincidunt. In accumsan mauris diam, eget porta nisl faucibus non. Vivamus pharetra felis eget facilisis vestibulum. Sed porta lacinia ante, id molestie ex cursus ut. Maecenas lacus arcu, hendrerit ac metus vitae, posuere tristique massa. Vestibulum elementum lobortis neque, semper sagittis leo cursus in. Donec accumsan risus at quam venenatis iaculis. Donec egestas blandit nunc. Pellentesque dignissim, mauris eu lacinia mollis, libero odio venenatis dui, sit amet suscipit ex leo et elit. Nam pellentesque id dolor quis rhoncus.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consequat ultrices eros, sed mattis massa hendrerit at. Praesent commodo congue arcu in vehicula. Nullam iaculis massa quis mi sollicitudin, ultrices aliquet nunc auctor. Sed tristique sit amet diam congue accumsan. Nulla feugiat cursus leo sed tincidunt. In accumsan mauris diam, eget porta nisl faucibus non. Vivamus pharetra felis eget facilisis vestibulum. Sed porta lacinia ante, id molestie ex cursus ut. Maecenas lacus arcu, hendrerit ac metus vitae, posuere tristique massa. Vestibulum elementum lobortis neque, semper sagittis leo cursus in. Donec accumsan risus at quam venenatis iaculis. Donec egestas blandit nunc. Pellentesque dignissim, mauris eu lacinia mollis, libero odio venenatis dui, sit amet suscipit ex leo et elit. Nam pellentesque id dolor quis rhoncus.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consequat ultrices eros, sed mattis massa hendrerit at. Praesent commodo congue arcu in vehicula. Nullam iaculis massa quis mi sollicitudin, ultrices aliquet nunc auctor. Sed tristique sit amet diam congue accumsan. Nulla feugiat cursus leo sed tincidunt. In accumsan mauris diam, eget porta nisl faucibus non. Vivamus pharetra felis eget facilisis vestibulum. Sed porta lacinia ante, id molestie ex cursus ut. Maecenas lacus arcu, hendrerit ac metus vitae, posuere tristique massa. Vestibulum elementum lobortis neque, semper sagittis leo cursus in. Donec accumsan risus at quam venenatis iaculis. Donec egestas blandit nunc. Pellentesque dignissim, mauris eu lacinia mollis, libero odio venenatis dui, sit amet suscipit ex leo et elit. Nam pellentesque id dolor quis rhoncus.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consequat ultrices eros, sed mattis massa hendrerit at. Praesent commodo congue arcu in vehicula. Nullam iaculis massa quis mi sollicitudin, ultrices aliquet nunc auctor. Sed tristique sit amet diam congue accumsan. Nulla feugiat cursus leo sed tincidunt. In accumsan mauris diam, eget porta nisl faucibus non. Vivamus pharetra felis eget facilisis vestibulum. Sed porta lacinia ante, id molestie ex cursus ut. Maecenas lacus arcu, hendrerit ac metus vitae, posuere tristique massa. Vestibulum elementum lobortis neque, semper sagittis leo cursus in. Donec accumsan risus at quam venenatis iaculis. Donec egestas blandit nunc. Pellentesque dignissim, mauris eu lacinia mollis, libero odio venenatis dui, sit amet suscipit ex leo et elit. Nam pellentesque id dolor quis rhoncus.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consequat ultrices eros, sed mattis massa hendrerit at. Praesent commodo congue arcu in vehicula. Nullam iaculis massa quis mi sollicitudin, ultrices aliquet nunc auctor. Sed tristique sit amet diam congue accumsan. Nulla feugiat cursus leo sed tincidunt. In accumsan mauris diam, eget porta nisl faucibus non. Vivamus pharetra felis eget facilisis vestibulum. Sed porta lacinia ante, id molestie ex cursus ut. Maecenas lacus arcu, hendrerit ac metus vitae, posuere tristique massa. Vestibulum elementum lobortis neque, semper sagittis leo cursus in. Donec accumsan risus at quam venenatis iaculis. Donec egestas blandit nunc. Pellentesque dignissim, mauris eu lacinia mollis, libero odio venenatis dui, sit amet suscipit ex leo et elit. Nam pellentesque id dolor quis rhoncus.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consequat ultrices eros, sed mattis massa hendrerit at. Praesent commodo congue arcu in vehicula. Nullam iaculis massa quis mi sollicitudin, ultrices aliquet nunc auctor. Sed tristique sit amet diam congue accumsan. Nulla feugiat cursus leo sed tincidunt. In accumsan mauris diam, eget porta nisl faucibus non. Vivamus pharetra felis eget facilisis vestibulum. Sed porta lacinia ante, id molestie ex cursus ut. Maecenas lacus arcu, hendrerit ac metus vitae, posuere tristique massa. Vestibulum elementum lobortis neque, semper sagittis leo cursus in. Donec accumsan risus at quam venenatis iaculis. Donec egestas blandit nunc. Pellentesque dignissim, mauris eu lacinia mollis, libero odio venenatis dui, sit amet suscipit ex leo et elit. Nam pellentesque id dolor quis rhoncus.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consequat ultrices eros, sed mattis massa hendrerit at. Praesent commodo congue arcu in vehicula. Nullam iaculis massa quis mi sollicitudin, ultrices aliquet nunc auctor. Sed tristique sit amet diam congue accumsan. Nulla feugiat cursus leo sed tincidunt. In accumsan mauris diam, eget porta nisl faucibus non. Vivamus pharetra felis eget facilisis vestibulum. Sed porta lacinia ante, id molestie ex cursus ut. Maecenas lacus arcu, hendrerit ac metus vitae, posuere tristique massa. Vestibulum elementum lobortis neque, semper sagittis leo cursus in. Donec accumsan risus at quam venenatis iaculis. Donec egestas blandit nunc. Pellentesque dignissim, mauris eu lacinia mollis, libero odio venenatis dui, sit amet suscipit ex leo et elit. Nam pellentesque id dolor quis rhoncus.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consequat ultrices eros, sed mattis massa hendrerit at. Praesent commodo congue arcu in vehicula. Nullam iaculis massa quis mi sollicitudin, ultrices aliquet nunc auctor. Sed tristique sit amet diam congue accumsan. Nulla feugiat cursus leo sed tincidunt. In accumsan mauris diam, eget porta nisl faucibus non. Vivamus pharetra felis eget facilisis vestibulum. Sed porta lacinia ante, id molestie ex cursus ut. Maecenas lacus arcu, hendrerit ac metus vitae, posuere tristique massa. Vestibulum elementum lobortis neque, semper sagittis leo cursus in. Donec accumsan risus at quam venenatis iaculis. Donec egestas blandit nunc. Pellentesque dignissim, mauris eu lacinia mollis, libero odio venenatis dui, sit amet suscipit ex leo et elit. Nam pellentesque id dolor quis rhoncus.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consequat ultrices eros, sed mattis massa hendrerit at. Praesent commodo congue arcu in vehicula. Nullam iaculis massa quis mi sollicitudin, ultrices aliquet nunc auctor. Sed tristique sit amet diam congue accumsan. Nulla feugiat cursus leo sed tincidunt. In accumsan mauris diam, eget porta nisl faucibus non. Vivamus pharetra felis eget facilisis vestibulum. Sed porta lacinia ante, id molestie ex cursus ut. Maecenas lacus arcu, hendrerit ac metus vitae, posuere tristique massa. Vestibulum elementum lobortis neque, semper sagittis leo cursus in. Donec accumsan risus at quam venenatis iaculis. Donec egestas blandit nunc. Pellentesque dignissim, mauris eu lacinia mollis, libero odio venenatis dui, sit amet suscipit ex leo et elit. Nam pellentesque id dolor quis rhoncus.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consequat ultrices eros, sed mattis massa hendrerit at. Praesent commodo congue arcu in vehicula. Nullam iaculis massa quis mi sollicitudin, ultrices aliquet nunc auctor. Sed tristique sit amet diam congue accumsan. Nulla feugiat cursus leo sed tincidunt. In accumsan mauris diam, eget porta nisl faucibus non. Vivamus pharetra felis eget facilisis vestibulum. Sed porta lacinia ante, id molestie ex cursus ut. Maecenas lacus arcu, hendrerit ac metus vitae, posuere tristique massa. Vestibulum elementum lobortis neque, semper sagittis leo cursus in. Donec accumsan risus at quam venenatis iaculis. Donec egestas blandit nunc. Pellentesque dignissim, mauris eu lacinia mollis, libero odio venenatis dui, sit amet suscipit ex leo et elit. Nam pellentesque id dolor quis rhoncus.
+            </p>
+        </div>
+    )
+};
+
+export default ModalPage;
